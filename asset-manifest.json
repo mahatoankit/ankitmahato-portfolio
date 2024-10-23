@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/ankitmahato/static/css/main.e2aeece3.css",
+    "main.js": "/ankitmahato/static/js/main.a95cc9e6.js",
+    "static/media/hotel.png": "/ankitmahato/static/media/hotel.3e9864525ad7785cd1c1.png",
+    "static/media/Me.png": "/ankitmahato/static/media/Me.10e945a3e6bc741635e2.png",
+    "static/media/golfweb.png": "/ankitmahato/static/media/golfweb.893d0731de750f6d2d6a.png",
+    "static/media/hospital.png": "/ankitmahato/static/media/hospital.088b5eadce2e68107394.png",
+    "static/media/anotherPortfolio.png": "/ankitmahato/static/media/anotherPortfolio.1b10b2a3529810b64f93.png",
+    "static/media/portfolioNew.png": "/ankitmahato/static/media/portfolioNew.6f867c077483aee8a31e.png",
+    "static/media/Ankit_Resume.pdf": "/ankitmahato/static/media/Ankit_Resume.d2b6317d4087cc199d6c.pdf",
+    "static/media/Project4.jpg": "/ankitmahato/static/media/Project4.8de82fea50154dddbe24.jpg",
+    "index.html": "/ankitmahato/index.html",
+    "main.e2aeece3.css.map": "/ankitmahato/static/css/main.e2aeece3.css.map",
+    "main.a95cc9e6.js.map": "/ankitmahato/static/js/main.a95cc9e6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2aeece3.css",
+    "static/js/main.a95cc9e6.js"
+  ]
+}
