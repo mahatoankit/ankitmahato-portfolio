@@ -79,6 +79,6 @@ Special thanks to open-source tools and libraries like React, MockAPI, and Mater
 ## Contact Information
 For inquiries or feedback, feel free to reach out:
 - **Email:** chaudhryankit848@gmail.com
-- **LinkedIn:** [https://www.linkedin.com/in/mahatoank](https://linkedin.com)
+- **LinkedIn:** [https://www.linkedin.com/in/mahatoankit](https://linkedin.com)
 
 ---
