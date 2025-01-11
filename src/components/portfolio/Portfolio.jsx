@@ -2,7 +2,6 @@ import "./portfolio.css";
 
 import hospital from "../../assets/hospital.png";
 import portfolio from "../../assets/anotherPortfolio.png";
-// import IMG5 from "../../assets/Jokes Project.jpg";
 import golfWeb from "../../assets/golfweb.png";
 import IMG6 from "../../assets/Project4.jpg";
 import hotel from "../../assets/hotel.png";
