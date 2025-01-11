@@ -8,7 +8,6 @@ import hotel from "../../assets/hotel.png";
 import newport from "../../assets/portfolioNew.png";
 import React from "react";
 
-//Portfolio function
 const Portfolio = () => {
   const soloProjects = [
     {
