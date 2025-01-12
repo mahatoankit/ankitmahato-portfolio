@@ -60,6 +60,7 @@ const Footer = () => {
       </div>
       <div className="footer__copyright">
         <small>&copy; AnkitMahato 2024. All rights reserved.</small>
+        <small>Made with reactJS</small>
       </div>
     </footer>
   );
