@@ -72,7 +72,7 @@ const Portfolio = () => {
     },
     {
       id: 7,
-      title: "Neuro Vision",
+      title: "NeuroVision",
       img: IMG7,
       description:
         "Brain tumor type classification system using machine learning algorithm (Convolutional Neural Network)",
