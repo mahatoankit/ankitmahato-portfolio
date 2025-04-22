@@ -1,7 +1,8 @@
 header {
-  height: 100%;
-  padding-top: 7rem;
+  height: 40vh; /* Reduced from 100vh to 50vh */
+  padding-top: 4rem; /* Reduced from 7rem to 4rem */
   overflow: hidden;
+  position: relative;
 }
 
 .header__container {
@@ -10,11 +11,38 @@ header {
   position: relative;
 }
 
+.header__container > h5 {
+  animation: fadeIn 1s ease forwards;
+}
+
+.header__container > h1 {
+  animation: fadeIn 1.2s ease 0.2s forwards;
+  margin: 0.8rem 0;
+  background: linear-gradient(90deg, var(--color-light), var(--color-white), var(--color-primary));
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 8s linear infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.header__container > h5:nth-of-type(2) {
+  animation: fadeIn 1.4s ease 0.4s forwards;
+}
+
 .cta {
   display: flex;
   justify-content: center;
   gap: 1.2rem;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem; /* Reduced from 2.5rem to 1.5rem */
+  flex-wrap: wrap;
+  animation: fadeIn 1.6s ease 0.6s forwards;
 }
 
 .header__socials {
@@ -24,7 +52,25 @@ header {
   gap: 0.8rem;
   position: absolute;
   left: 5rem;
-  bottom: 1rem;
+  bottom: 3rem;
+  animation: fadeIn 1.8s ease 0.8s forwards;
+}
+
+.header__socials a {
+  background: var(--color-bg-variant);
+  color: var(--color-primary);
+  padding: 0.8rem;
+  border-radius: 0.7rem;
+  display: flex;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.header__socials a:hover {
+  background: transparent;
+  color: var(--color-white);
+  border-color: var(--color-primary-variant);
+  transform: translateY(-5px);
 }
 
 .header__socials::after {
@@ -41,25 +87,68 @@ header {
   transform: rotate(90deg);
   font-weight: 300;
   font-size: 0.9rem;
+  animation: fadeIn 2s ease 1s forwards;
+}
+
+.scroll__down:hover {
+  color: var(--color-white);
+  transform: rotate(90deg) translateX(5px);
+}
+
+/* Glass card effect for profile photo if available */
+.me {
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 22rem;
+  height: 30rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 0 0;
+  overflow: hidden;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+  animation: float 6s ease-in-out infinite;
 }
 
 @media screen and (max-width: 1024px){
   header {
-    height: 68vh;
+    height: 40vh; /* Reduced from 68vh to 40vh */
   }
 
-  section {
-    margin-top: 6rem;
+  .header__socials {
+    left: 2rem;
+    bottom: 2rem;
+  }
+
+  .scroll__down {
+    right: 2rem;
+    bottom: 2rem;
+  }
+
+  .me {
+    width: 18rem;
+    height: 24rem;
   }
 }
 
 @media screen and (max-width: 600px){
   header {
-    height: 100vh;
+    height: 45vh; /* Reduced from 100vh to 45vh */
+    padding-top: 3rem; /* Reduced from 5rem to 3rem */
   }
 
   .header__socials,
   .scroll__down {
     display: none;
+  }
+
+  .me {
+    width: 16rem;
+    height: 22rem;
+    margin-top: 2rem;
+  }
+
+  .cta {
+    margin-top: 1.5rem;
   }
 }
