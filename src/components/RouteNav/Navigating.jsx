@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Navigating.css";
 import { IoHomeOutline } from "react-icons/io5";
 import { FaCode } from "react-icons/fa6";
@@ -8,15 +8,26 @@ import { VscFeedback } from "react-icons/vsc";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { CiGlobe } from "react-icons/ci";
 
-const Navigating = (e) => {
-  let [activeNav, setActiveNav] = useState("home");
+const Navigating = () => {
+  const [activeNav, setActiveNav] = useState("home");
+  const location = useLocation();
+  
+  // Update active nav based on current route
+  useEffect(() => {
+    const path = location.pathname;
+    if (path === "/") setActiveNav("home");
+    else if (path === "/skills") setActiveNav("skills");
+    else if (path === "/projects") setActiveNav("projects");
+    else if (path === "/testimonials") setActiveNav("testimonials");
+    else if (path === "/contact") setActiveNav("contact");
+    else if (path === "/blogs") setActiveNav("blogs");
+  }, [location]);
+
   return (
     <nav>
       <Link
         to="/"
-        onClick={(e) => {
-          setActiveNav("home");
-        }}
+        onClick={() => setActiveNav("home")}
         className={activeNav === "home" ? "active" : ""}
       >
         <IoHomeOutline />
@@ -24,9 +35,7 @@ const Navigating = (e) => {
 
       <Link
         to="/skills"
-        onClick={(e) => {
-          setActiveNav("skills");
-        }}
+        onClick={() => setActiveNav("skills")}
         className={activeNav === "skills" ? "active" : ""}
       >
         <FaCode />
@@ -34,9 +43,7 @@ const Navigating = (e) => {
 
       <Link
         to="/projects"
-        onClick={(e) => {
-          setActiveNav("projects");
-        }}
+        onClick={() => setActiveNav("projects")}
         className={activeNav === "projects" ? "active" : ""}
       >
         <GoProject />
@@ -44,9 +51,7 @@ const Navigating = (e) => {
 
       <Link
         to="/testimonials"
-        onClick={() => {
-          setActiveNav("testimonials");
-        }}
+        onClick={() => setActiveNav("testimonials")}
         className={activeNav === "testimonials" ? "active" : ""}
       >
         <VscFeedback />
@@ -54,9 +59,7 @@ const Navigating = (e) => {
 
       <Link
         to="/contact"
-        onClick={() => {
-          setActiveNav("contact");
-        }}
+        onClick={() => setActiveNav("contact")}
         className={activeNav === "contact" ? "active" : ""}
       >
         <BiMessageSquareDetail />
@@ -64,9 +67,7 @@ const Navigating = (e) => {
 
       <Link
         to="/blogs"
-        onClick={() => {
-          setActiveNav("blogs");
-        }}
+        onClick={() => setActiveNav("blogs")}
         className={activeNav === "blogs" ? "active" : ""}
       >
         <CiGlobe />

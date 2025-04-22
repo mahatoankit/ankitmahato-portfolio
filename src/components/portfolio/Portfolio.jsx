@@ -70,16 +70,6 @@ const Portfolio = () => {
       link: "#",
       github: "#",
     },
-    {
-      id: 7,
-      title: "NeuroVision",
-      img: IMG7,
-      description:
-        "Brain tumor type classification system using machine learning algorithm (Convolutional Neural Network)",
-      technologies: "NextJS | CSS | JavaScript | Tensorflow",
-      link: "#",
-      github: "#",
-    },
   ];
 
   return (
